@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task2 Tables</title>
+    <style>
+      body {
+        padding-left: 100px;
+      }
+      table,
+      th,
+      td {
+        border-collapse: collapse;
+        border: 1px solid black;
+        padding: 20px;
+      }
+      table {
+        margin-left: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Tables as per the Task</h2>
+    <!-- Table List Start -->
+    <ol>
+      <li>
+        <!-- Table 1 Start -->
+        <table>
+          <tr>
+            <td rowspan="2">1</td>
+            <td colspan="2">2</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>6</td>
+            <!-- <td>7</td> -->
+          </tr>
+        </table>
+      </li>
+
+      <li style="margin-top: 20px">
+        <!-- Table 2 Start -->
+        <table>
+          <tr>
+            <td colspan="2"></td>
+            <td rowspan="2"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </li>
+    </ol>
+
+    <!-- Table Size Start -->
+    <h2>Table size</h2>
+    <h3>Normal size</h3>
+    <table style="width: 100px;">
+      <caption>
+        Intern Details
+      </caption>
+
+      <thead>
+        <th colspan="2">Name</th>
+        <th>Age</th>
+        <th>City</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ankit</td>
+          <td>Patel</td>
+          <td>21</td>
+          <td>Vapi</td>
+        </tr>
+        <tr>
+          <td>Aman</td>
+          <td>Patel</td>
+          <td>21</td>
+          <td>Vapi</td>
+        </tr>
+        <tr>
+          <td>Abhishek</td>
+          <td>Patel</td>
+          <td>21</td>
+          <td>Valsad</td>
+        </tr>
+        <tr>
+          <td>Aayushi</td>
+          <td>Parmar</td>
+          <td>21</td>
+          <td>Valsad</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- Different's size Strat -->
+    <h3>Different's size</h3>
+    <div style="width: 300px; overflow: auto;">
+      <table style="width: 100%">
+        <caption>
+          Intern Details
+        </caption>
+        <colgroup>
+          <col span="2" style="background-color: cornflowerblue" />
+          <col span="1" style="background-color: tomato" />
+          <col style="background-color: yellowgreen" />
+        </colgroup>
+        <thead>
+          <th colspan="2">Name</th>
+          <th>Age</th>
+          <th style="width: fit-content">City</th>
+        </thead>
+        <tbody>
+          <tr style="height: 100px">
+            <td>Ankit</td>
+            <td>Patel</td>
+            <td>21</td>
+            <td>Vapi</td>
+          </tr>
+          <tr>
+            <td>Aman</td>
+            <td>Patel</td>
+            <td>21</td>
+            <td>Vapi</td>
+          </tr>
+          <tr>
+            <td>Abhishek</td>
+            <td>Patel</td>
+            <td>21</td>
+            <td>Valsad</td>
+          </tr>
+          <tr>
+            <td>Aayushi</td>
+            <td>Parmar</td>
+            <td>21</td>
+            <td>Valsad</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

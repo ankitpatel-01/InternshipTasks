@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parallax with css</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: rgba(0, 0, 0, 0.8);
+      position: fixed;
+      width: 100%;
+    }
+
+    .navContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 50px;
+      font-size: 36px;
+      color: white;
+    }
+
+    .parallax {
+      height: 80vh;
+      width: 100%;
+      background-attachment: fixed;
+      background-position: center;
+      background-color: rgba(255, 255, 255, 0.65);
+    }
+
+    .img1 {
+      background-image: url(/assets//images/landscape_1.jpg);
+    }
+
+    .img2 {
+      background-image: url(/assets//images/landscape_2.jpg);
+      height: 40vh;
+    }
+
+    .img3 {
+      background-image: url(/assets//images/mangekyou.jpg);
+      height: 60vh;
+      background-size: cover;
+    }
+
+    .captionContainer {
+      position: relative;
+      width: 100%;
+      top: 50%;
+      text-align: center;
+    }
+
+    .captionContainer span {
+      font-size: 24px;
+      background-color: gray;
+      color: white;
+      padding: 10px 30px;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    .contentContainer {
+      padding: 50px 100px;
+      background-color: black;
+      color: white;
+      font-size: 22px;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    p {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Start Top Nav -->
+  <header class="header">
+    <div class="navContainer">
+      <p id="logo">LOGO</p>
+      <span class="fas fa-bars"></span>
+    </div>
+  </header>
+  <!-- Start Section 1 -->
+  <section>
+    <div class="parallax img1">
+      <div class="captionContainer">
+        <h1><span>Landscape</span></h1>
+        <span>SCROLL DOWN</span>
+      </div>
+    </div>
+    <div class="contentContainer">
+      <h2>Some Content</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus minima
+        dolorem velit pariatur sint expedita dicta eius placeat nobis similique
+        rem magnam culpa quidem molestias voluptatibus cupiditate, cum
+        temporibus quibusdam voluptate vel dolore maxime. Ab explicabo eveniet,
+        doloremque officia atque unde minus culpa repudiandae cumque. Laborum in
+        voluptas minus repudiandae!
+      </p>
+    </div>
+  </section>
+
+  <!-- Start Section 2 -->
+  <div class="parallax img2">
+    <div class="captionContainer">
+      <span>SCROLL DOWN</span>
+    </div>
+  </div>
+  <div class="contentContainer">
+    <h2>Some Content</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus minima
+      dolorem velit pariatur sint expedita dicta eius placeat nobis similique
+      rem magnam culpa quidem molestias voluptatibus cupiditate, cum
+      temporibus quibusdam voluptate vel dolore maxime. Ab explicabo eveniet,
+      doloremque officia atque unde minus culpa repudiandae cumque. Laborum in
+      voluptas minus repudiandae!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quisquam
+      eum natus exercitationem, praesentium eligendi inventore accusamus
+      ullam, expedita sint ad aut at ea voluptate assumenda ab reprehenderit
+      nihil voluptas.
+    </p>
+  </div>
+  <!-- Start Section 3 -->
+  <div class="parallax img3">
+    <div class="captionContainer">
+      <span>SCROLL DOWN</span>
+    </div>
+  </div>
+  <div class="contentContainer">
+    <h2>Some Content</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus minima
+      dolorem velit pariatur sint expedita dicta eius placeat nobis similique
+      rem magnam culpa quidem molestias voluptatibus cupiditate, cum
+      temporibus quibusdam voluptate vel dolore maxime. Ab explicabo eveniet,
+      doloremque officia atque unde minus culpa repudiandae cumque. Laborum in
+      voluptas minus repudiandae!
+    </p>
+  </div>
+  <div class="parallax img3">
+    <div class="captionContainer">
+      <span>SCROLL UP</span>
+    </div>
+  </div>
+  <div class="contentContainer">
+    <h2>Some Content</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus minima
+      dolorem velit pariatur sint expedita dicta eius placeat nobis similique
+      rem magnam culpa quidem molestias voluptatibus cupiditate, cum
+      temporibus quibusdam voluptate vel dolore maxime. Ab explicabo eveniet,
+      doloremque officia atque unde minus culpa repudiandae cumque. Laborum in
+      voluptas minus repudiandae!
+    </p>
+  </div>
+</body>
+
+</html>
