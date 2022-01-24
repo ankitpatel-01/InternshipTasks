@@ -18,5 +18,30 @@ body {
 }
 
 .sidebar-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 250px;
   width: 250px;
+  height: 100%;
+  border: 1px solid;
+}
+
+.logo{
+  padding: 10px 30px;
+  height: 60px;
+  text-align: center;
+  border: 1px solid;
+}
+
+.sidebar{
+  padding: 50px 30px;
+}
+
+.main-wrapper{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+  border: 1px solid;
 }
