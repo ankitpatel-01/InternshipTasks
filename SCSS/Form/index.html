@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-3 HTML Form</title>
+    <link rel="stylesheet" href="assets/css/style.min.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- From Start -->
+      <form action="#" method="post" autocomplete="on">
+        <!-- From fieldset Start -->
+        <fieldset>
+          <legend>
+            <h3>Payment Form</h3>
+          </legend>
+          <!-- Contact Details Start -->
+          <fieldset>
+            <legend>
+              <h4>Contact Details</h4>
+            </legend>
+            <p>
+              <label for="firstName">First Name :*</label>
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                placeholder="Enter your First Name"
+                required
+                autofocus
+              />
+            </p>
+            <p>
+              <label for="lastName">Last Name :*</label>
+              <input
+                type="text"
+                name="lastName"
+                id="lastName"
+                placeholder="Enter your Last Name"
+                required
+              />
+            </p>
+            <p>
+              <label for="email">Email :*</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="example@mail.com"
+                required
+              />
+            </p>
+            <p>
+              <label for="phoneNo">Contact Number :*</label>
+              <input
+                type="number"
+                name="phoneNo"
+                id="phoneNo"
+                placeholder="9876612345"
+                min="10"
+                required
+              />
+            </p>
+            <p>
+              <label for="address">Address :</label>
+              <textarea
+                name="address"
+                id="address"
+                cols="30"
+                rows="5"
+                placeholder="Enter your address here"
+                style="resize: none"
+              ></textarea>
+            </p>
+            <p>
+              <label for="pincode">Pincode :*</label>
+              <input
+                type="number"
+                name="pincode"
+                id="pincode"
+                placeholder="327961"
+                required
+              />
+            </p>
+            <fieldset>
+              <legend>Gender *</legend>
+              <input
+                type="radio"
+                name="gender"
+                id="male"
+                value="male"
+                required
+              />
+              <label for="male">Male</label>
+              <input
+                type="radio"
+                name="gender"
+                id="female"
+                value="female"
+                required
+              />
+              <label for="female">Female</label>
+              <input
+                type="radio"
+                name="gender"
+                id="other"
+                value="other"
+                required
+              />
+              <label for="other">Other</label>
+            </fieldset>
+            <p>
+              <label for="country">Country :</label>
+              <select name="country" id="country">
+                <option value="">Select your Country</option>
+                <option value="india">India</option>
+                <option value="us">US</option>
+                <option value="japan">Japan</option>
+                <option value="canada">Canada</option>
+                <option value="uk">Uk</option>
+              </select>
+            </p>
+          </fieldset>
+          <!-- Payment Details Start -->
+          <fieldset>
+            <legend>
+              <h4>Payment details</h4>
+            </legend>
+            <p>
+              <label for="cardType">Card Type :*</label>
+              <select name="cardType" id="cardType" required>
+                <option value="debit" selected>Debit</option>
+                <option value="credit">Credit</option>
+                <option value="Master">Master</option>
+              </select>
+            </p>
+            <p>
+              <label for="cardNo">Card Number :*</label>
+              <input
+                type="number"
+                name="cardNo"
+                id="cardNo"
+                placeholder="9876612345"
+                required
+              />
+            </p>
+            <p>
+              <label for="cvv">CVV :*</label>
+              <input type="password" name="cvv" id="cvv" min="3" required />
+            </p>
+            <p>
+              <label for="expirationDate">Expiration Date :*</label>
+              <input
+                type="date"
+                name="expirationDate"
+                id="expirationDate"
+                min="2005-01-01"
+                max="2026-01-01"
+                required
+              />
+            </p>
+          </fieldset>
+          <p>
+            <input type="checkbox" name="agree" required />
+            <label for="">All the details fill are correct*</label>
+          </p>
+          <p>
+            <input type="submit" value="Pay Now" />
+            <input type="reset" value="Rest Form" />
+          </p>
+          <p>* are required fields</p>
+        </fieldset>
+      </form>
+      <!-- From Ends -->
+    </div>
+  </body>
+</html>
