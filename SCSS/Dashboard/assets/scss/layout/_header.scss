@@ -1,0 +1,43 @@
+// Header area style
+.header {
+  padding: $header-padding-y $header-padding-x;
+  background-color: $header-bg;
+  @extend %headerborder;
+
+  & .brandlogo{
+    width: $barnd-logo-width;
+    span{
+      font-size: $barnd-logo-size;
+    }
+  }
+
+  .searchbox {
+    width: $searchbox-width;
+    background-color: $searchbox-bg;
+    border: 1px solid $outline;
+    @include padding($left:1rem);
+
+    span {
+      font-size: 1.5rem;
+      font-weight: 200;
+      margin-right: 4px;
+      color: gray;
+    }
+    input {
+      background-color: $searchbox-bg;
+      flex: 1;
+      height: 40px;
+      font-size: 1.1rem;
+      outline: none;
+      border: none;
+      padding: 0.5rem;
+    }
+  }
+
+  .avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+}

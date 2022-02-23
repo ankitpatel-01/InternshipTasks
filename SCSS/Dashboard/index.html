@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Scss</title>
+
+    <!-- style  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- icons  -->
+    <link rel="stylesheet" href="assets/icons/style.css">
+</head>
+
+<body>
+    <!-- main wrapper start -->
+    <div class="d-flex flex-column overflow-hidden h-100">
+        <!-- Header starts -->
+        <header class="header flex-shrink-0">
+
+           <div class="d-flex aling-item-center justify-content-between">
+                <!-- logo and search start -->
+            <div class="d-flex align-item-center">
+                <!-- brang logo  -->
+                <div class="brandlogo d-flex align-item-center justify-content-center">
+                    <span class="icon icon-dashboard"></span>
+                </div>
+                <!-- brang logo ends -->
+                <!-- search box -->
+                <div class="searchbox d-flex align-item-center">
+                    <span class="icon-search"></span>
+                    <input type="text" placeholder="Search for transaction, items, etc">
+                    <button class="btn btn-primary" type="button">Search</button>
+                </div>
+                <!-- search box end-->
+            </div>
+            <!-- logo and search end -->
+
+            <!-- user avatar start -->
+            <div class="d-flex align-item-center">
+                <span class="icon-message-outlined"></span>
+                <span class="icon-bell"></span>
+                <figure>
+                    <img class="avatar" src="assets/img/avatar.png" alt="">
+                </figure>
+                <span class="icon-circle-down"></span>
+            </div>
+            <!-- user avatar start end-->
+           </div>
+
+        </header>
+        <!-- Header ends -->
+        <main class="d-flex flex-grow-1">
+            <!-- sidebar starts -->
+            <input type="checkbox" id="menutoggle">
+            <aside id="primaryNav" class="d-flex flex-column">
+                <!--sidebar brand icon starts-->
+                <span class="icon icon-dashboard"></span>
+                <!-- sidebar brand icon ends-->
+                <!-- navigations starts-->
+                <nav class="flex-grow-1 overflow-vertical">
+                    <ul class="navbar">
+                        <li class="nav-item" routerLink="/dashboard" routerLinkActive="active">
+                            <a class="nav-link">
+                                <span class="icon icon-cart"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span class="icon icon-notepad"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span class="icon icon-settings"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- navigations ends -->
+                <!--Signout nav starts-->
+                <nav class="navLog">
+                    <ul class="navbar">
+                        <li class="nav-item" routerLink="/dashboard" routerLinkActive="active">
+                            <a class="nav-link">
+                                <span class="icon icon-warning"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span class="icon icon-sign-out"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Signout nav ends -->
+                <label id="toggle" for="menutoggle"><span class="icon-circle-right"></span></label>
+            </aside>
+            <!-- sidebar ends -->
+
+            <!-- main content starts -->
+            <div class="content-wrapper overflow-vertical flex-grow-1">
+                <span id="app-title">Dashboard</span>
+                <!-- card container  -->
+                <div class="row">
+                    <!-- card  -->
+                    <div class="card">
+                        <!-- card header  -->
+                        <div class="card-header">
+                            <div class="card-logo">
+                                <span class="icon-eye"></span>
+                            </div>
+                            <span class="icon-arrow-up-right2"></span>
+                        </div>
+                        <!-- card body  -->
+                        <div class="card-body">
+                            <p class="card-title">Total Views</p>
+                            <p class="card-text">304,206</p>
+                            <p class="card-sub-text">Start from 1 jan 2022</p>
+                        </div>
+                    </div>
+                    <!-- card end  -->
+                    <!-- card  -->
+                    <div class="card">
+                        <!-- card header  -->
+                        <div class="card-header">
+                            <div class="card-logo">
+                                <span class="icon-eye"></span>
+                            </div>
+                            <span class="icon-arrow-up-right2"></span>
+                        </div>
+                        <!-- card body  -->
+                        <div class="card-body">
+                            <p class="card-title">Total Views</p>
+                            <p class="card-text">304,206</p>
+                            <p class="card-sub-text">Start from 1 jan 2022</p>
+                        </div>
+                    </div>
+                    <!-- card end  -->
+                    <!-- card  -->
+                    <div class="card">
+                        <!-- card header  -->
+                        <div class="card-header">
+                            <div class="card-logo">
+                                <span class="icon-eye"></span>
+                            </div>
+                            <span class="icon-arrow-up-right2"></span>
+                        </div>
+                        <!-- card body  -->
+                        <div class="card-body">
+                            <p class="card-title">Total Views</p>
+                            <p class="card-text">304,206</p>
+                            <p class="card-sub-text">Start from 1 jan 2022</p>
+                        </div>
+                    </div>
+                    <!-- card end  -->
+                    <!-- card  -->
+                    <div class="card">
+                        <!-- card header  -->
+                        <div class="card-header">
+                            <div class="card-logo">
+                                <span class="icon-eye"></span>
+                            </div>
+                            <span class="icon-arrow-up-right2"></span>
+                        </div>
+                        <!-- card body  -->
+                        <div class="card-body">
+                            <p class="card-title">Total Views</p>
+                            <p class="card-text">304,206</p>
+                            <p class="card-sub-text">Start from 1 jan 2022</p>
+                        </div>
+                    </div>
+                    <!-- card end  -->
+                </div>
+                <!-- card container end  -->
+
+                <!-- product sell container start -->
+                <div class="row">
+                    <!-- product table start -->
+                    <table class="table">
+                        <thead>
+                            <th>No</th>
+                            <th>Product Name</th>
+                            <th>Status</th>
+                            <th>Sold</th>
+                            <th>View</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <figure>
+                                        <img src="" alt="">
+                                    </figure>
+                                    New Mobile App Lit Lit Form
+                                </td>
+                                <td>
+                                    Active
+                                </td>
+                                <td>
+                                    10
+                                </td>
+                                <td>
+                                    320
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <figure>
+                                        <img src="" alt="">
+                                    </figure>
+                                    New Mobile App Lit Lit Form
+                                </td>
+                                <td>
+                                    Active
+                                </td>
+                                <td>
+                                    10
+                                </td>
+                                <td>
+                                    320
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <figure>
+                                        <img src="" alt="">
+                                    </figure>
+                                    New Mobile App Lit Lit Form
+                                </td>
+                                <td>
+                                    Active
+                                </td>
+                                <td>
+                                    10
+                                </td>
+                                <td>
+                                    320
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <figure>
+                                        <img src="" alt="">
+                                    </figure>
+                                    New Mobile App Lit Lit Form
+                                </td>
+                                <td>
+                                    Active
+                                </td>
+                                <td>
+                                    10
+                                </td>
+                                <td>
+                                    320
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <figure>
+                                        <img src="" alt="">
+                                    </figure>
+                                    New Mobile App Lit Lit Form
+                                </td>
+                                <td>
+                                    Active
+                                </td>
+                                <td>
+                                    10
+                                </td>
+                                <td>
+                                    320
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- product table end -->
+
+                    <!-- product view and sell  -->
+                    <div class="viewSell">
+                        <h5>Views & sells</h5>
+                        <div class="row">
+                            <div>
+                                <span class="icon-stop2"></span>
+                                <span>Total Views</span>
+                            </div>
+                            <div>
+                                <span class="icon-stop2"></span>
+                                <span>Total Views</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- product view and sell  ends-->
+                </div>
+                <!-- product sell container end -->
+            </div>
+            <!-- main content ends -->
+        </main>
+    </div>
+    <!-- main wrapper ends -->
+</body>
+
+</html>

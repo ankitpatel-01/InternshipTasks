@@ -1,0 +1,24 @@
+//input checkbox
+#menutoggle {
+  display: none;
+  &:checked {
+    ~ #primaryNav {
+      #toggle {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+//lable
+#toggle {
+  @include position(absolute, 50%, auto, auto, 100%);
+  font-size: 1.5rem;
+}
+
+#primaryNav {
+  flex: 0 0 $sidebar-width;
+  max-width: $sidebar-width;
+  background-color: $sidebar-bg;
+  @include position(relative);
+}
