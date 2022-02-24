@@ -17,37 +17,51 @@
     <!-- main wrapper start -->
     <div class="d-flex flex-column overflow-hidden h-100">
         <!-- Header starts -->
-        <header class="header flex-shrink-0">
+        <header class="header d-flex align-item-center flex-shrink-0">
 
-           <div class="d-flex aling-item-center justify-content-between">
+            <div class="header-content d-flex aling-item-center justify-content-between">
                 <!-- logo and search start -->
-            <div class="d-flex align-item-center">
-                <!-- brang logo  -->
-                <div class="brandlogo d-flex align-item-center justify-content-center">
-                    <span class="icon icon-dashboard"></span>
+                <div class="d-flex align-item-center">
+                    <!-- brang logo  -->
+                    <div class="brandlogo d-flex align-item-center justify-content-center">
+                        <span class="icon icon-dashboard"></span>
+                    </div>
+                    <!-- brang logo ends -->
+                    <!-- search box -->
+                    <form class="searchbox d-flex align-item-center">
+                        <span class="icon-search"></span>
+                        <input type="text" placeholder="Search for transaction, items, etc">
+                        <button class="btn btn-primary" type="button">Search</button>
+                    </form>
+                    <!-- search box end-->
                 </div>
-                <!-- brang logo ends -->
-                <!-- search box -->
-                <div class="searchbox d-flex align-item-center">
-                    <span class="icon-search"></span>
-                    <input type="text" placeholder="Search for transaction, items, etc">
-                    <button class="btn btn-primary" type="button">Search</button>
-                </div>
-                <!-- search box end-->
-            </div>
-            <!-- logo and search end -->
+                <!-- logo and search end -->
 
-            <!-- user avatar start -->
-            <div class="d-flex align-item-center">
-                <span class="icon-message-outlined"></span>
-                <span class="icon-bell"></span>
-                <figure>
-                    <img class="avatar" src="assets/img/avatar.png" alt="">
-                </figure>
-                <span class="icon-circle-down"></span>
+                <!-- header notification start -->
+                <nav>
+                    <ul class="notify d-flex align-item-center">
+                        <li>
+                            <a href="#"><span class="icon icon-message-outlined"></span>
+                                <div class='notification-dot'></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"> <span class="icon icon-bell"></span></a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img class="avatar" src="assets/img/avatar.png" alt="profile img">
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" href="#"><span class="icon icon-circle-down"></span></a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- header notification end-->
             </div>
-            <!-- user avatar start end-->
-           </div>
 
         </header>
         <!-- Header ends -->
@@ -55,24 +69,26 @@
             <!-- sidebar starts -->
             <input type="checkbox" id="menutoggle">
             <aside id="primaryNav" class="d-flex flex-column">
-                <!--sidebar brand icon starts-->
-                <span class="icon icon-dashboard"></span>
-                <!-- sidebar brand icon ends-->
                 <!-- navigations starts-->
                 <nav class="flex-grow-1 overflow-vertical">
-                    <ul class="navbar">
-                        <li class="nav-item" routerLink="/dashboard" routerLinkActive="active">
-                            <a class="nav-link">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="icon icon-dashboard"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
                                 <span class="icon icon-cart"></span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">
+                            <a href="#" class="nav-link">
                                 <span class="icon icon-notepad"></span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">
+                            <a href="#" class="nav-link">
                                 <span class="icon icon-settings"></span>
                             </a>
                         </li>
@@ -82,13 +98,13 @@
                 <!--Signout nav starts-->
                 <nav class="navLog">
                     <ul class="navbar">
-                        <li class="nav-item" routerLink="/dashboard" routerLinkActive="active">
-                            <a class="nav-link">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
                                 <span class="icon icon-warning"></span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">
+                            <a href="#" class="nav-link">
                                 <span class="icon icon-sign-out"></span>
                             </a>
                         </li>
@@ -100,198 +116,232 @@
             <!-- sidebar ends -->
 
             <!-- main content starts -->
-            <div class="content-wrapper overflow-vertical flex-grow-1">
-                <span id="app-title">Dashboard</span>
+            <div class="content-wrapper overflow-vertical flex-grow-1 ">
+                <h1 id="app-title">Dashboard</h1>
                 <!-- card container  -->
-                <div class="row">
-                    <!-- card  -->
-                    <div class="card">
-                        <!-- card header  -->
-                        <div class="card-header">
-                            <div class="card-logo">
-                                <span class="icon-eye"></span>
+                <div class="row mt-4">
+                    <!-- row item card start -->
+                    <div class="row-item-card">
+                        <!-- card  -->
+                        <div class="card-bg-primary card">
+                            <!-- card header  -->
+                            <div class="card-header">
+                                <div class="card-logo">
+                                    <span class="icon icon-eye"></span>
+                                </div>
+                                <span class="icon-arrow-up-right2"></span>
                             </div>
-                            <span class="icon-arrow-up-right2"></span>
-                        </div>
-                        <!-- card body  -->
-                        <div class="card-body">
-                            <p class="card-title">Total Views</p>
-                            <p class="card-text">304,206</p>
-                            <p class="card-sub-text">Start from 1 jan 2022</p>
-                        </div>
-                    </div>
-                    <!-- card end  -->
-                    <!-- card  -->
-                    <div class="card">
-                        <!-- card header  -->
-                        <div class="card-header">
-                            <div class="card-logo">
-                                <span class="icon-eye"></span>
+                            <!-- card body  -->
+                            <div class="card-body">
+                                <p class="card-title">Total Views</p>
+                                <p class="card-text">304,206</p>
+                                <p class="card-sub-text">Start from 1 jan 2022</p>
                             </div>
-                            <span class="icon-arrow-up-right2"></span>
                         </div>
-                        <!-- card body  -->
-                        <div class="card-body">
-                            <p class="card-title">Total Views</p>
-                            <p class="card-text">304,206</p>
-                            <p class="card-sub-text">Start from 1 jan 2022</p>
-                        </div>
+                        <!-- card end  -->
                     </div>
-                    <!-- card end  -->
-                    <!-- card  -->
-                    <div class="card">
-                        <!-- card header  -->
-                        <div class="card-header">
-                            <div class="card-logo">
-                                <span class="icon-eye"></span>
+                    <!-- row item card end -->
+                    <!-- row item card start -->
+                    <div class="row-item-card">
+                        <!-- card  -->
+                        <div class="card card-bg-success-primary">
+                            <!-- card header  -->
+                            <div class="card-header">
+                                <div class="card-logo">
+                                    <span class="icon icon-eye"></span>
+                                </div>
+                                <span class="icon-arrow-up-right2"></span>
                             </div>
-                            <span class="icon-arrow-up-right2"></span>
-                        </div>
-                        <!-- card body  -->
-                        <div class="card-body">
-                            <p class="card-title">Total Views</p>
-                            <p class="card-text">304,206</p>
-                            <p class="card-sub-text">Start from 1 jan 2022</p>
-                        </div>
-                    </div>
-                    <!-- card end  -->
-                    <!-- card  -->
-                    <div class="card">
-                        <!-- card header  -->
-                        <div class="card-header">
-                            <div class="card-logo">
-                                <span class="icon-eye"></span>
+                            <!-- card body  -->
+                            <div class="card-body">
+                                <p class="card-title">Total Views</p>
+                                <p class="card-text">304,206</p>
+                                <a class="card-link">+ Add New Product</a>
                             </div>
-                            <span class="icon-arrow-up-right2"></span>
                         </div>
-                        <!-- card body  -->
-                        <div class="card-body">
-                            <p class="card-title">Total Views</p>
-                            <p class="card-text">304,206</p>
-                            <p class="card-sub-text">Start from 1 jan 2022</p>
-                        </div>
+                        <!-- card end  -->
                     </div>
-                    <!-- card end  -->
+                    <!-- row item card end -->
+                    <!-- row item card start -->
+                    <div class="row-item-card">
+                        <!-- card  -->
+                        <div class="card  card-bg-primary">
+                            <!-- card header  -->
+                            <div class="card-header">
+                                <div class="card-logo ">
+                                    <span class="icon icon-eye"></span>
+                                </div>
+                                <span class="icon-arrow-up-right2"></span>
+                            </div>
+                            <!-- card body  -->
+                            <div class="card-body">
+                                <p class="card-title">Total Views</p>
+                                <p class="card-text">304,206</p>
+                                <p class="card-sub-text">Start from 1 jan 2022</p>
+                            </div>
+                        </div>
+                        <!-- card end  -->
+                    </div>
+                    <!-- row item card end -->
+                    <!-- row item card start -->
+                    <div class="row-item-card">
+                        <!-- card  -->
+                        <div class="card card-bg-success">
+                            <!-- card header  -->
+                            <div class="card-header">
+                                <div class="card-logo ">
+                                    <span class="icon icon-eye "></span>
+                                </div>
+                                <span class="icon-arrow-up-right2"></span>
+                            </div>
+                            <!-- card body  -->
+                            <div class="card-body">
+                                <p class="card-title">Total Views</p>
+                                <p class="card-text">304,206</p>
+                                <p class="card-sub-text">Start from 1 jan 2022</p>
+                            </div>
+                        </div>
+                        <!-- card end  -->
+                    </div>
+                    <!-- row item card end -->
+
                 </div>
                 <!-- card container end  -->
 
                 <!-- product sell container start -->
-                <div class="row">
-                    <!-- product table start -->
-                    <table class="table">
-                        <thead>
-                            <th>No</th>
-                            <th>Product Name</th>
-                            <th>Status</th>
-                            <th>Sold</th>
-                            <th>View</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>
-                                    <figure>
-                                        <img src="" alt="">
-                                    </figure>
-                                    New Mobile App Lit Lit Form
-                                </td>
-                                <td>
-                                    Active
-                                </td>
-                                <td>
-                                    10
-                                </td>
-                                <td>
-                                    320
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>
-                                    <figure>
-                                        <img src="" alt="">
-                                    </figure>
-                                    New Mobile App Lit Lit Form
-                                </td>
-                                <td>
-                                    Active
-                                </td>
-                                <td>
-                                    10
-                                </td>
-                                <td>
-                                    320
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>
-                                    <figure>
-                                        <img src="" alt="">
-                                    </figure>
-                                    New Mobile App Lit Lit Form
-                                </td>
-                                <td>
-                                    Active
-                                </td>
-                                <td>
-                                    10
-                                </td>
-                                <td>
-                                    320
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>
-                                    <figure>
-                                        <img src="" alt="">
-                                    </figure>
-                                    New Mobile App Lit Lit Form
-                                </td>
-                                <td>
-                                    Active
-                                </td>
-                                <td>
-                                    10
-                                </td>
-                                <td>
-                                    320
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>
-                                    <figure>
-                                        <img src="" alt="">
-                                    </figure>
-                                    New Mobile App Lit Lit Form
-                                </td>
-                                <td>
-                                    Active
-                                </td>
-                                <td>
-                                    10
-                                </td>
-                                <td>
-                                    320
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!-- product table end -->
+                <div class="row mt-4">
+                    <div class="row-item-table">
+                        <div class="table-container overflow-auto">
+                            <!-- product table start -->
+                            <table class="table">
+                                <thead>
+                                    <th>No</th>
+                                    <th></th>
+                                    <th>Product Name</th>
+                                    <th>Status</th>
+                                    <th>Sold</th>
+                                    <th>View</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <figure>
+                                                <img class="img productimg" src="assets/img/product2.jpg" alt="">
+                                            </figure>
+                                        </td>
+                                        <td>
+                                            New Mobile App Lit Lit Form jhjgjgjgjhhgjgjhgjgjg
+                                        </td>
+                                        <td>
+                                            <span class="status active">Active</span>
+                                        </td>
+                                        <td>
+                                            10
+                                        </td>
+                                        <td>
+                                            320
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <figure>
+                                                <img class="img productimg" src="assets/img/product1.jpg" alt="">
+                                            </figure>
+                                        </td>
+                                        <td>
+                                            New Mobile App Lit Lit Form
+                                        </td>
+                                        <td>
+                                            <span class="status active">Active</span>
+                                        </td>
+                                        <td>
+                                            10
+                                        </td>
+                                        <td>
+                                            320
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <figure>
+                                                <img class="img productimg" src="assets/img/product3.jpg" alt="">
+                                            </figure>
+                                        </td>
+                                        <td>
+                                            New Mobile App Lit Lit Form
+                                        </td>
+                                        <td>
+                                            <span class="status active">Active</span>
+                                        </td>
+                                        <td>
+                                            10
+                                        </td>
+                                        <td>
+                                            320
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <figure>
+                                                <img class="img productimg" src="assets/img/product3.jpg" alt="">
+                                            </figure>
+                                        </td>
+                                        <td>
+                                            New Mobile App Lit Lit Form
+                                        </td>
+                                        <td>
+                                            <span class="status active">Active</span>
+                                        </td>
+                                        <td>
+                                            10
+                                        </td>
+                                        <td>
+                                            320
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <figure>
+                                                <img class="img productimg" src="assets/img/product3.jpg" alt="">
+                                            </figure>
+                                        </td>
+                                        <td>
+                                            New Mobile App Lit Lit Form
+                                        </td>
+                                        <td>
+                                            <span class="status inactive">In active</span>
+                                        </td>
+                                        <td>
+                                            10
+                                        </td>
+                                        <td>
+                                            320
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- product table end -->
+                        </div>
+                    </div>
 
                     <!-- product view and sell  -->
-                    <div class="viewSell">
-                        <h5>Views & sells</h5>
-                        <div class="row">
-                            <div>
-                                <span class="icon-stop2"></span>
-                                <span>Total Views</span>
-                            </div>
-                            <div>
-                                <span class="icon-stop2"></span>
-                                <span>Total Views</span>
+                    <div class="row-item-graph">
+                        <div class="container">
+                            <h5>Views & sells</h5>
+                            <div class="d-flex align-item-center">
+                                <div>
+                                    <span class="icon-stop2"></span>
+                                    <span>Total Views</span>
+                                </div>
+                                <div>
+                                    <span class="icon-stop2"></span>
+                                    <span>Total Views</span>
+                                </div>
                             </div>
                         </div>
                     </div>

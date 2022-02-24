@@ -3,43 +3,54 @@ $primary: #438ffe;
 
 // Mainly use for UI controls like Buttons
 $secondary: #f5f7f9;
+$success-primary: #8bc38a;
 $success: #83bcbd;
 $danger: #dc3545;
 $warning: #ffc107;
 $info: #17a2b8;
-$white:#ffffff;
+$white: #ffffff;
 
 //Accent color
 $accent: #fe764a;
 
 //Body
-$body-bg-color:$white;
+$body-bg-color: $white;
 
 //primart text color
-$primary-text-color:#170e4d;
+$primary-text-color: #170e4d;
 
 // Dedicated for button text only
 $btn-text-primary: $white;
 
-//outline mainly for border color
-$outline:#e4e4e4;
+//conatiner
+$container-bg:$white;
 
+//outline mainly for border color
+$outline: #e4e4e4;
 
 //header
-$header-bg:$white;
-$searchbox-bg:$secondary;
+$header-bg: $white;
+$searchbox-bg: $secondary;
+$header-icon-color: #abb1bf;
+
+// card
+$card-bg:$white;
+$card-hover-bg: $primary;
+$cardlogo-hover-bg: #559afe;
 
 //sidebar
-$sidebar-bg:$white;
+$sidebar-bg: $white;
+$sidebar-icon-color: #abb1bf;
 
 //content
-$bg-color:#f8f8f8;
+$bg-color: #f8f8f8;
 
 //theme colors map
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
-  "accent":$accent,
+  "accent": $accent,
+  "success-primary": $success-primary,
   "success": $success,
   "danger": $danger,
   "warning": $warning,

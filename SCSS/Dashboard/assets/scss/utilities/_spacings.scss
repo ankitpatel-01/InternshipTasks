@@ -8,16 +8,18 @@ $spacing-map: (
 );
 
 @each $key, $value in $spacing-map {
-    .mt-#{$key} {
-      margin-top: $value;
-    }
-    .mr-#{$key} {
-      margin-right: $value;
-    }
-    .mb-#{$key} {
-      margin-bottom: $value;
-    }
-    .ml-#{$key} {
-      margin-left: $value;
-    }
+  .mt-#{$key} {
+    margin-top: $value;
   }
+  .mr-#{$key} {
+    margin-right: $value;
+  }
+  .mb-#{$key} {
+    margin-bottom: $value;
+  }
+  .ml-#{$key} {
+    margin-left: $value;
+  }
+}
+
+

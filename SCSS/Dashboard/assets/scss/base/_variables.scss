@@ -5,17 +5,37 @@ $font-size-base: 1rem;
 $font-family: 'Josefin Sans', sans-serif;
 $font-bold: 500;
 
-
-//Header
-$header-padding-y:.75rem;
-$header-padding-x:0;
-
 //sideBar
 $sidebar-width : 100px;
 
-//header searchbox
-$barnd-logo-size:2rem;
-$barnd-logo-width:$sidebar-width;
-$searchbox-width:500px;
+//Header
+$header-height:90px;
+    //bard
+    $barnd-logo-size:2rem;
+    $barnd-logo-width:$sidebar-width;
 
+    //header searchbox
+    $searchbox-ml:40px;
+    $searchbox-height:45px;
+    $searchbox-width:460px;
+
+    //notification
+    $header-icon-size:1.5rem;
+    $avatar-height:40px;
+    $notification-dot-width:10px;
+
+//content
+$content-padding:40px;
+
+//conatiner
+$container-padding:1.5rem;
+
+
+//componets
+    //cards
+    $card-padding:1.5rem;
+    $card-logo-height:60px;
+    $card-logo-width:60px;
+    $card-logo-size:1.5rem;
+    
 

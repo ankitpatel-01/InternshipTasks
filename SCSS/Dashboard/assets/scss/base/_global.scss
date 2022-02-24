@@ -26,8 +26,9 @@ body {
 //flex Start
 .row{
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
 }
 
 .d-flex {
@@ -97,5 +98,32 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
+.overflow-auto {
+  overflow: auto;
+}
 
 //overflow ends
+
+//container
+.container{
+  background-color: $container-bg;
+  padding: $container-padding;
+}
+
+//position 
+.position-relative{
+  position: relative;
+}
+
+.position-absolute{
+  position: absolute;
+}
+
+.status{
+  &.active{
+    color: $primary;
+  }
+  &.inactive{
+    color: $accent;
+  }
+}

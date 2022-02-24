@@ -7,9 +7,32 @@
     left    : $left;
 }
 
-@mixin padding($top:auto,$right:auto,$bottom:auto,$left:auto){
+@mixin padding($top:0px,$right:0px,$bottom:0px,$left:0px){
     padding-top: $top;
     padding-left: $left;
     padding-bottom: $bottom;
     padding-right: $right;
+}
+
+// border radius mixin
+@mixin border-radius($for: all, $val: 10px) {
+    @if $for==all {
+        border-radius: $val;
+    }
+
+    @else if $for==topleft {
+        border-top-left-radius: $val;
+    }
+
+    @else if $for==topright {
+        border-top-right-radius: $val;
+    }
+
+    @else if $for==bottomright {
+        border-bottom-right-radius: $val;
+    }
+
+    @else if $for==bottomleft {
+        border-bottom-left-radius: $val;
+    }
 }

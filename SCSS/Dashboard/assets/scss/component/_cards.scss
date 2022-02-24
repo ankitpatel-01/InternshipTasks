@@ -1,40 +1,93 @@
 // Card styles goes here
-// Card styles goes here
 .card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.25rem;
-    word-wrap: break-word;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: $card-padding;
+  background-color: $card-bg;
+  word-wrap: break-word;
 
-    &-header{
-        display: flex;
-        justify-content: space-between;
-    }
-  
-    &-body {
-      width: 100%;
-      padding: 1rem;
-    }
-  
-    &-title {
-      font-size: 1.5rem;
-      font-weight: 500;
-      margin-bottom: 0.5rem;
-    }
-  
-    &-sub-title {
-      font-size: 1rem;
-      font-weight: 500;
-      margin-top: -0.25rem;
-      margin-bottom: 0.5rem;
-    }
-  
-    &-text {
-      font-size: 1rem;
-      margin: 1rem 0;
+  &-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-logo {
+    @extend %flex-center;
+    width: $card-logo-width;
+    height: $card-logo-height;
+    .icon {
+      font-size: $card-logo-size;
     }
   }
-  
+
+  &-body {
+    margin-top: 1rem;
+    width: 100%;
+    color: #b5bbc7;
+  }
+
+  &-title {
+    font-size: 1rem;
+    font-weight: 200;
+    margin-bottom: 0.5rem;
+  }
+
+  &-sub-text {
+    font-weight: 200;
+    padding-top: 1rem;
+    border-top: 1px solid $outline;
+    font-size: 1rem;
+  }
+
+  &-link {
+    display: block;
+    color: $primary;
+    font-weight: 200;
+    padding-top: 1rem;
+    border-top: 1px solid $outline;
+    font-size: 1rem;
+  }
+
+  &-text {
+    color: $primary-text-color;
+    font-size: 2.2rem;
+    margin-top: 0.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  &:hover {
+    // background-color: $card-hover-bg;
+    color: $white;
+    cursor: pointer;
+
+    .icon,
+    .card-body,
+    .card-link,
+    .card-text {
+      color: $white;
+    }
+  }
+}
+
+@each $key, $value in $theme-colors {
+  .card-bg-#{$key} {
+    .card-logo {
+      background-color:lighten($value, 30%);
+      .icon {
+        color: $value;
+      }
+    }
+    &.card {
+      &:hover {
+        background-color: $value;
+        .card-logo {
+          background-color: lighten($value, 5%);
+          .icon {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}

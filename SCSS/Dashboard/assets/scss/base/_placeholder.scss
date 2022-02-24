@@ -2,3 +2,9 @@
 %headerborder{
     border-bottom: 1px solid $outline;
 }
+
+%flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

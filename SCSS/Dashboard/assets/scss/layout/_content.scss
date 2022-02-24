@@ -1,3 +1,24 @@
-.content-wrapper{
-    background-color: $bg-color;
+.content-wrapper {
+  background-color: $bg-color;
+  color: $primary-text-color;
+  padding: $content-padding;
+  padding-left: px($container-padding) + $sidebar-width;
+
+  & .row-item-card {
+    width: 25%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  & .row-item-table {
+    width: 65%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  & .row-item-graph {
+    width: 35%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
 }
