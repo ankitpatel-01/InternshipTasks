@@ -4,13 +4,13 @@
   background-color: $header-bg;
   @extend %headerborder;
 
-  & .header-content{
+  & .header-content {
     width: 100%;
   }
 
-  & .brandlogo{
+  & .brandlogo {
     width: $barnd-logo-width;
-    span{
+    span {
       font-size: $barnd-logo-size;
     }
   }
@@ -24,9 +24,9 @@
     border: 1px solid $outline;
 
     span {
-      @include position(absolute,auto,auto,auto,1rem);
-      font-size: 1.5rem;
-      font-weight: 200;
+      @include position(absolute, auto, auto, auto, 1rem);
+      font-size: 1.2rem;
+      font-weight: 100;
       color: gray;
     }
     input {
@@ -35,23 +35,26 @@
       font-size: 1.1rem;
       outline: none;
       border: none;
-      @include padding(.6rem,.6rem,.6rem,3rem)
+      @include padding(0.6rem, 0.6rem, 0.6rem, 3rem);
+    }
+    button {
+      height: 100%;
     }
   }
 
-  .notify{
-    li:not(:first-child){
+  .notify {
+    li:not(:first-child) {
       margin-left: 30px;
     }
-    li:last-child{
-      margin-left:20px;
-      margin-right:40px;
+    li:last-child {
+      margin-left: 20px;
+      margin-right: 40px;
     }
 
-    a{
+    a {
       position: relative;
-      .notification-dot{
-        @include position($top:-16px,$left:18px);
+      .notification-dot {
+        @include position($top: -12px, $left: 16px);
         height: $notification-dot-width;
         width: $notification-dot-width;
         background-color: $accent;
@@ -64,13 +67,12 @@
       vertical-align: middle;
       width: $avatar-height;
       height: $avatar-height;
-      @include border-radius(all,50%)
+      @include border-radius(all, 50%);
     }
-  
-    .icon{
+
+    .icon {
       font-size: $header-icon-size;
       color: $header-icon-color;
     }
   }
-  
 }

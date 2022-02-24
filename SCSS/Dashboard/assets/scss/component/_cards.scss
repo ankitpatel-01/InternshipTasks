@@ -7,6 +7,10 @@
   background-color: $card-bg;
   word-wrap: break-word;
 
+  .icon {
+    font-size: $card-logo-size;
+  }
+
   &-header {
     display: flex;
     justify-content: space-between;
@@ -16,9 +20,6 @@
     @extend %flex-center;
     width: $card-logo-width;
     height: $card-logo-height;
-    .icon {
-      font-size: $card-logo-size;
-    }
   }
 
   &-body {
@@ -70,10 +71,10 @@
   }
 }
 
-@each $key, $value in $theme-colors {
-  .card-bg-#{$key} {
+@each $key, $value in $card-colors {
+  .card-#{$key} {
     .card-logo {
-      background-color:lighten($value, 30%);
+      background-color: lighten($value, 30%);
       .icon {
         color: $value;
       }

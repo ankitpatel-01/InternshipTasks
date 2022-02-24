@@ -7,24 +7,24 @@
 
 html,
 body {
-    height  : 100%;
-    overflow: hidden;
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
-    line-height: 1;
-    font-family: $font-family;
-    font-size: $font-size-base;
-    background-color: $body-bg-color;
+  line-height: 1;
+  font-family: $font-family;
+  font-size: $font-size-base;
+  background-color: $body-bg-color;
 }
 
 //height-100
-.h-100{
+.h-100 {
   height: 100%;
 }
 
 //flex Start
-.row{
+.row {
   display: flex;
   flex-wrap: wrap;
   margin-right: -0.75rem;
@@ -88,7 +88,6 @@ body {
 }
 //flex Ends
 
-
 //overflow Start
 .overflow-hidden {
   overflow: hidden;
@@ -105,25 +104,25 @@ body {
 //overflow ends
 
 //container
-.container{
+.container {
   background-color: $container-bg;
   padding: $container-padding;
 }
 
-//position 
-.position-relative{
+//position
+.position-relative {
   position: relative;
 }
 
-.position-absolute{
+.position-absolute {
   position: absolute;
 }
 
-.status{
-  &.active{
+.status {
+  &.active {
     color: $primary;
   }
-  &.inactive{
+  &.inactive {
     color: $accent;
   }
 }

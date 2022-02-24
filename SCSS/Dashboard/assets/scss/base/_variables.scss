@@ -2,40 +2,42 @@
 
 // Fonts
 $font-size-base: 1rem;
-$font-family: 'Josefin Sans', sans-serif;
+// $font-family: 'Josefin Sans', sans-serif;
+$font-family: "Poppins", sans-serif;
+$font-light: 200;
+$font-regular: 400;
 $font-bold: 500;
 
+$heading-font-weight: $font-bold;
+
 //sideBar
-$sidebar-width : 100px;
+$sidebar-width: 100px;
 
 //Header
-$header-height:90px;
-    //bard
-    $barnd-logo-size:2rem;
-    $barnd-logo-width:$sidebar-width;
+$header-height: 90px;
+//bard
+$barnd-logo-size: 2rem;
+$barnd-logo-width: $sidebar-width;
 
-    //header searchbox
-    $searchbox-ml:40px;
-    $searchbox-height:45px;
-    $searchbox-width:460px;
+//header searchbox
+$searchbox-ml: 40px;
+$searchbox-height: 45px;
+$searchbox-width: 460px;
 
-    //notification
-    $header-icon-size:1.5rem;
-    $avatar-height:40px;
-    $notification-dot-width:10px;
+//notification
+$header-icon-size: 1.5rem;
+$avatar-height: 40px;
+$notification-dot-width: 10px;
 
 //content
-$content-padding:40px;
+$content-padding: 40px;
 
 //conatiner
-$container-padding:1.5rem;
-
+$container-padding: 1.5rem;
 
 //componets
-    //cards
-    $card-padding:1.5rem;
-    $card-logo-height:60px;
-    $card-logo-width:60px;
-    $card-logo-size:1.5rem;
-    
-
+//cards
+$card-padding: 1.5rem;
+$card-logo-height: 60px;
+$card-logo-width: 60px;
+$card-logo-size: 1.5rem;

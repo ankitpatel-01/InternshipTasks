@@ -13,6 +13,9 @@ $white: #ffffff;
 //Accent color
 $accent: #fe764a;
 
+//icon
+$icon-color: #abb1bf;
+
 //Body
 $body-bg-color: $white;
 
@@ -23,7 +26,7 @@ $primary-text-color: #170e4d;
 $btn-text-primary: $white;
 
 //conatiner
-$container-bg:$white;
+$container-bg: $white;
 
 //outline mainly for border color
 $outline: #e4e4e4;
@@ -31,16 +34,17 @@ $outline: #e4e4e4;
 //header
 $header-bg: $white;
 $searchbox-bg: $secondary;
-$header-icon-color: #abb1bf;
+$header-icon-color: $icon-color;
 
 // card
-$card-bg:$white;
+$card-bg: $white;
 $card-hover-bg: $primary;
 $cardlogo-hover-bg: #559afe;
 
 //sidebar
+$toggle-color: $icon-color;
 $sidebar-bg: $white;
-$sidebar-icon-color: #abb1bf;
+$sidebar-icon-color: $icon-color;
 
 //content
 $bg-color: #f8f8f8;
@@ -49,11 +53,24 @@ $bg-color: #f8f8f8;
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
-  "accent": $accent,
   "success-primary": $success-primary,
   "success": $success,
   "danger": $danger,
   "warning": $warning,
   "info": $info,
-  "white": $white,
+);
+
+$sells: (
+  "up": $success-primary,
+  "down": $accent,
+  "views": $success,
+  "sells": $accent,
+);
+
+//card colors
+$card-colors: (
+  "views": $primary,
+  "products": $success-primary,
+  "users": $primary,
+  "sells": $success,
 );

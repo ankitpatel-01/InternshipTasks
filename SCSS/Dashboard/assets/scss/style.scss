@@ -1,11 +1,11 @@
-//utilities classes
-@import 'utilities/index';
-
 // Project base styling
-@import 'base/index';
+@import "base/index";
+
+//utilities classes
+@import "utilities/index";
 
 // Project Specific Components styling
-@import 'component/index';
+@import "component/index";
 
 // Project layout
-@import 'layout/index';
+@import "layout/index";

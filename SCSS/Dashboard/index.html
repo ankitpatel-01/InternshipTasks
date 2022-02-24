@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <title>Dashboard Scss</title>
 
     <!-- style  -->
@@ -14,11 +15,11 @@
 </head>
 
 <body>
-    <!-- main wrapper start -->
-    <div class="d-flex flex-column overflow-hidden h-100">
-        <!-- Header starts -->
+    <!-- wrapper  start-->
+    <div class="d-flex flex-column h-100">
+        <!-- header start  -->
         <header class="header d-flex align-item-center flex-shrink-0">
-
+            <!-- header container starts  -->
             <div class="header-content d-flex aling-item-center justify-content-between">
                 <!-- logo and search start -->
                 <div class="d-flex align-item-center">
@@ -31,7 +32,7 @@
                     <form class="searchbox d-flex align-item-center">
                         <span class="icon-search"></span>
                         <input type="text" placeholder="Search for transaction, items, etc">
-                        <button class="btn btn-primary" type="button">Search</button>
+                        <button class="btn btn-primary" type="submit">Search</button>
                     </form>
                     <!-- search box end-->
                 </div>
@@ -46,7 +47,9 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"> <span class="icon icon-bell"></span></a>
+                            <a href="#"> <span class="icon icon-bell"></span>
+                                <div class='notification-dot'></div>
+                            </a>
                         </li>
                         <li>
                             <a href="#">
@@ -62,13 +65,15 @@
                 </nav>
                 <!-- header notification end-->
             </div>
-
+            <!-- header container ends  -->
         </header>
-        <!-- Header ends -->
-        <main class="d-flex flex-grow-1">
-            <!-- sidebar starts -->
+        <!-- header ends  -->
+        <!-- secondary wrapper starts-->
+        <main class="d-flex flex-grow-1 overflow-hidden">
+            <!-- sidebar starts  -->
             <input type="checkbox" id="menutoggle">
-            <aside id="primaryNav" class="d-flex flex-column">
+            <label id="toggle" for="menutoggle"><span class="icon-circle-right"></span></label>
+            <aside id="primaryNav" class="d-flex flex-column h-100">
                 <!-- navigations starts-->
                 <nav class="flex-grow-1 overflow-vertical">
                     <ul class="navbar-nav">
@@ -96,7 +101,7 @@
                 </nav>
                 <!-- navigations ends -->
                 <!--Signout nav starts-->
-                <nav class="navLog">
+                <nav class="navLog overflow-hidden">
                     <ul class="navbar">
                         <li class="nav-item">
                             <a href="#" class="nav-link">
@@ -111,10 +116,8 @@
                     </ul>
                 </nav>
                 <!-- Signout nav ends -->
-                <label id="toggle" for="menutoggle"><span class="icon-circle-right"></span></label>
             </aside>
-            <!-- sidebar ends -->
-
+            <!-- sidebar ends  -->
             <!-- main content starts -->
             <div class="content-wrapper overflow-vertical flex-grow-1 ">
                 <h1 id="app-title">Dashboard</h1>
@@ -123,19 +126,19 @@
                     <!-- row item card start -->
                     <div class="row-item-card">
                         <!-- card  -->
-                        <div class="card-bg-primary card">
+                        <div class="card card-views">
                             <!-- card header  -->
                             <div class="card-header">
                                 <div class="card-logo">
                                     <span class="icon icon-eye"></span>
                                 </div>
-                                <span class="icon-arrow-up-right2"></span>
+                                <span class="icon icon-arrow-up-right2 color-up"></span>
                             </div>
                             <!-- card body  -->
                             <div class="card-body">
                                 <p class="card-title">Total Views</p>
-                                <p class="card-text">304,206</p>
-                                <p class="card-sub-text">Start from 1 jan 2022</p>
+                                <p class="card-text">308,402</p>
+                                <p class="card-sub-text">Start from 3 jan 2022</p>
                             </div>
                         </div>
                         <!-- card end  -->
@@ -144,18 +147,18 @@
                     <!-- row item card start -->
                     <div class="row-item-card">
                         <!-- card  -->
-                        <div class="card card-bg-success-primary">
+                        <div class="card card-products">
                             <!-- card header  -->
                             <div class="card-header">
                                 <div class="card-logo">
-                                    <span class="icon icon-eye"></span>
+                                    <span class="icon icon-shopping-bag"></span>
                                 </div>
-                                <span class="icon-arrow-up-right2"></span>
+                                <span class="icon icon-arrow-down-right2 color-down"></span>
                             </div>
                             <!-- card body  -->
                             <div class="card-body">
-                                <p class="card-title">Total Views</p>
-                                <p class="card-text">304,206</p>
+                                <p class="card-title">Total Products</p>
+                                <p class="card-text">10,820</p>
                                 <a class="card-link">+ Add New Product</a>
                             </div>
                         </div>
@@ -165,19 +168,19 @@
                     <!-- row item card start -->
                     <div class="row-item-card">
                         <!-- card  -->
-                        <div class="card  card-bg-primary">
+                        <div class="card card-users">
                             <!-- card header  -->
                             <div class="card-header">
                                 <div class="card-logo ">
-                                    <span class="icon icon-eye"></span>
+                                    <span class="icon icon-user-group"></span>
                                 </div>
-                                <span class="icon-arrow-up-right2"></span>
+                                <span class="icon icon-arrow-up-right2 color-up"></span>
                             </div>
                             <!-- card body  -->
                             <div class="card-body">
-                                <p class="card-title">Total Views</p>
-                                <p class="card-text">304,206</p>
-                                <p class="card-sub-text">Start from 1 jan 2022</p>
+                                <p class="card-title">Total Users</p>
+                                <p class="card-text">8,425</p>
+                                <p class="card-sub-text">New Users noted every week</p>
                             </div>
                         </div>
                         <!-- card end  -->
@@ -186,19 +189,19 @@
                     <!-- row item card start -->
                     <div class="row-item-card">
                         <!-- card  -->
-                        <div class="card card-bg-success">
+                        <div class="card card-sells">
                             <!-- card header  -->
                             <div class="card-header">
                                 <div class="card-logo ">
-                                    <span class="icon icon-eye "></span>
+                                    <span class="icon icon-cart "></span>
                                 </div>
-                                <span class="icon-arrow-up-right2"></span>
+                                <span class="icon icon-arrow-up-right2 color-up"></span>
                             </div>
                             <!-- card body  -->
                             <div class="card-body">
-                                <p class="card-title">Total Views</p>
-                                <p class="card-text">304,206</p>
-                                <p class="card-sub-text">Start from 1 jan 2022</p>
+                                <p class="card-title">Total Sells</p>
+                                <p class="card-text">1,028,623</p>
+                                <p class="card-sub-text">Start from 3 jan 2022</p>
                             </div>
                         </div>
                         <!-- card end  -->
@@ -210,7 +213,7 @@
 
                 <!-- product sell container start -->
                 <div class="row mt-4">
-                    <div class="row-item-table">
+                    <div class="productlisting">
                         <div class="table-container overflow-auto">
                             <!-- product table start -->
                             <table class="table">
@@ -227,11 +230,12 @@
                                         <td>1</td>
                                         <td>
                                             <figure>
-                                                <img class="img productimg" src="assets/img/product2.jpg" alt="">
+                                                <img class="img productimg" src="assets/img/product2.jpg"
+                                                    alt="product Image">
                                             </figure>
                                         </td>
                                         <td>
-                                            New Mobile App Lit Lit Form jhjgjgjgjhhgjgjhgjgjg
+                                            New Mobile App Lit
                                         </td>
                                         <td>
                                             <span class="status active">Active</span>
@@ -244,14 +248,15 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>1</td>
+                                        <td>2</td>
                                         <td>
                                             <figure>
-                                                <img class="img productimg" src="assets/img/product1.jpg" alt="">
+                                                <img class="img productimg" src="assets/img/product1.jpg"
+                                                    alt="product Image">
                                             </figure>
                                         </td>
                                         <td>
-                                            New Mobile App Lit Lit Form
+                                            New Watch brand style
                                         </td>
                                         <td>
                                             <span class="status active">Active</span>
@@ -264,14 +269,15 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>1</td>
+                                        <td>3</td>
                                         <td>
                                             <figure>
-                                                <img class="img productimg" src="assets/img/product3.jpg" alt="">
+                                                <img class="img productimg" src="assets/img/product3.jpg"
+                                                    alt="product Image">
                                             </figure>
                                         </td>
                                         <td>
-                                            New Mobile App Lit Lit Form
+                                            New show design
                                         </td>
                                         <td>
                                             <span class="status active">Active</span>
@@ -284,14 +290,15 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>1</td>
+                                        <td>4</td>
                                         <td>
                                             <figure>
-                                                <img class="img productimg" src="assets/img/product3.jpg" alt="">
+                                                <img class="img productimg" src="assets/img/product1.jpg"
+                                                    alt="product Image">
                                             </figure>
                                         </td>
                                         <td>
-                                            New Mobile App Lit Lit Form
+                                            New Mobile App Lit2
                                         </td>
                                         <td>
                                             <span class="status active">Active</span>
@@ -304,17 +311,39 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>1</td>
+                                        <td>5</td>
                                         <td>
                                             <figure>
-                                                <img class="img productimg" src="assets/img/product3.jpg" alt="">
+                                                <img class="img productimg" src="assets/img/product2.jpg"
+                                                    alt="product Image">
                                             </figure>
                                         </td>
                                         <td>
-                                            New Mobile App Lit Lit Form
+                                            New Watch App
                                         </td>
                                         <td>
                                             <span class="status inactive">In active</span>
+                                        </td>
+                                        <td>
+                                            10
+                                        </td>
+                                        <td>
+                                            320
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>
+                                            <figure>
+                                                <img class="img productimg" src="assets/img/product1.jpg"
+                                                    alt="product Image">
+                                            </figure>
+                                        </td>
+                                        <td>
+                                            New Watch App
+                                        </td>
+                                        <td>
+                                            <span class="status active">In active</span>
                                         </td>
                                         <td>
                                             10
@@ -330,16 +359,19 @@
                     </div>
 
                     <!-- product view and sell  -->
-                    <div class="row-item-graph">
+                    <div class="sells-graph">
                         <div class="container">
-                            <h5>Views & sells</h5>
-                            <div class="d-flex align-item-center">
+                            <div class="d-flex align-item-center justify-content-between">
+                                <span>Views & sells</span>
+                                <span>This Week <span class="icon-circle-down"></span></span>
+                            </div>
+                            <div class="d-flex align-item-center mt-3">
                                 <div>
-                                    <span class="icon-stop2"></span>
+                                    <span class="icon-stop2 color-views"></span>
                                     <span>Total Views</span>
                                 </div>
-                                <div>
-                                    <span class="icon-stop2"></span>
+                                <div class="ml-3">
+                                    <span class="icon-stop2 color-sells"></span>
                                     <span>Total Views</span>
                                 </div>
                             </div>
@@ -351,8 +383,10 @@
             </div>
             <!-- main content ends -->
         </main>
+        <!-- secondary wrapper starts-->
+
     </div>
-    <!-- main wrapper ends -->
+    <!-- wrapper  ends-->
 </body>
 
 </html>
