@@ -27,8 +27,8 @@ body {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -0.75rem;
-  margin-left: -0.75rem;
+  margin-right: -$coloum-padding-side;
+  margin-left: -$coloum-padding-side;
 }
 
 .d-flex {
@@ -103,11 +103,6 @@ body {
 
 //overflow ends
 
-//container
-.container {
-  background-color: $container-bg;
-  padding: $container-padding;
-}
 
 //position
 .position-relative {

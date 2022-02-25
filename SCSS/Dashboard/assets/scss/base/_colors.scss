@@ -1,7 +1,6 @@
 // Theme Primary Color
 $primary: #438ffe;
-
-// Mainly use for UI controls like Buttons
+// Mainly use for UI controls like Buttons AND Text;
 $secondary: #f5f7f9;
 $success-primary: #8bc38a;
 $success: #83bcbd;
@@ -9,18 +8,22 @@ $danger: #dc3545;
 $warning: #ffc107;
 $info: #17a2b8;
 $white: #ffffff;
+$outline: #abb1bf;
 
 //Accent color
 $accent: #fe764a;
 
 //icon
-$icon-color: #abb1bf;
+$icon-color: $outline;
 
 //Body
 $body-bg-color: $white;
 
 //primart text color
 $primary-text-color: #170e4d;
+
+//form-control
+$control-bg:$secondary;
 
 // Dedicated for button text only
 $btn-text-primary: $white;
@@ -29,7 +32,7 @@ $btn-text-primary: $white;
 $container-bg: $white;
 
 //outline mainly for border color
-$outline: #e4e4e4;
+// $outline: #e4e4e4;
 
 //header
 $header-bg: $white;
@@ -40,11 +43,14 @@ $header-icon-color: $icon-color;
 $card-bg: $white;
 $card-hover-bg: $primary;
 $cardlogo-hover-bg: #559afe;
+$card-text-color:#b5bbc7;
 
-//sidebar
+//==========sidebar============
 $toggle-color: $icon-color;
 $sidebar-bg: $white;
-$sidebar-icon-color: $icon-color;
+$nav-link-color: $icon-color;
+$nav-link-hover-color:$primary;
+
 
 //content
 $bg-color: #f8f8f8;
@@ -58,6 +64,7 @@ $theme-colors: (
   "danger": $danger,
   "warning": $warning,
   "info": $info,
+  "outline":$outline,
 );
 
 $sells: (
@@ -74,3 +81,10 @@ $card-colors: (
   "users": $primary,
   "sells": $success,
 );
+
+//graph
+
+$graph:(
+  "sell":$accent,
+  "view":$success,
+)

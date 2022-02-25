@@ -25,40 +25,35 @@
   &-body {
     margin-top: 1rem;
     width: 100%;
-    color: #b5bbc7;
+    color: $card-text-color;
   }
 
   &-title {
-    font-size: 1rem;
-    font-weight: 200;
+    font-size: $card-tite;
+    font-weight:$font-light;
     margin-bottom: 0.5rem;
   }
 
-  &-sub-text {
-    font-weight: 200;
+  &-sub-text,&-link {
+    font-weight:$font-light;
     padding-top: 1rem;
     border-top: 1px solid $outline;
-    font-size: 1rem;
+    font-size: $card-sub-title;
   }
 
   &-link {
     display: block;
     color: $primary;
-    font-weight: 200;
-    padding-top: 1rem;
-    border-top: 1px solid $outline;
-    font-size: 1rem;
   }
 
   &-text {
     color: $primary-text-color;
-    font-size: 2.2rem;
+    font-size: $card-text;
     margin-top: 0.8rem;
     margin-bottom: 1.2rem;
   }
 
   &:hover {
-    // background-color: $card-hover-bg;
     color: $white;
     cursor: pointer;
 

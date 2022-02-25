@@ -10,16 +10,23 @@ $font-bold: 500;
 
 $heading-font-weight: $font-bold;
 
-//sideBar
+//==============sideBar starts=================
 $sidebar-width: 100px;
+$toggle-size:1.5rem;
+//nav items
+$nav-item-padding:1rem;
+$nav-link-padding:.6rem;
+$nav-link-font-size:1.6rem;
 
-//Header
+//==============sideBar ends=================
+
+//=========Header start=============
 $header-height: 90px;
-//bard
-$barnd-logo-size: 2rem;
+//bard-logo
+$barnd-logo-size: 1.6rem;
 $barnd-logo-width: $sidebar-width;
 
-//header searchbox
+//searchbox
 $searchbox-ml: 40px;
 $searchbox-height: 45px;
 $searchbox-width: 460px;
@@ -28,16 +35,45 @@ $searchbox-width: 460px;
 $header-icon-size: 1.5rem;
 $avatar-height: 40px;
 $notification-dot-width: 10px;
+//=========Header ends=============
 
-//content
-$content-padding: 40px;
+//===============content start ======================
+$content-wrapper-padding: 40px;
 
-//conatiner
-$container-padding: 1.5rem;
+//coloum in row class
+$coloum-padding-side:0.75rem;
 
 //componets
-//cards
+
+//===button===
+$btn-padding-x:1rem;
+$btn-padding-y:.3rem;
+$btn-font-size:1.1rem;
+
+//=====card====
 $card-padding: 1.5rem;
 $card-logo-height: 60px;
 $card-logo-width: 60px;
 $card-logo-size: 1.5rem;
+$card-tite:1rem;
+$card-sub-title:1rem;
+$card-text:2.2rem;
+
+//table
+$product-table-height:480px;
+$product-img-width:50px;
+$product-img-height:50px;
+$table-data-padding:1rem;
+$table-row-space:1rem;
+
+
+//graph
+$sells-graph-height:480px;
+//===============content start ======================
+
+//=========responsive design ======================
+// $break-point:(
+//     "small":567px,
+//     "medium":768px,
+//     "large":992px,
+// );

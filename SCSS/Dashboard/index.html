@@ -69,14 +69,14 @@
         </header>
         <!-- header ends  -->
         <!-- secondary wrapper starts-->
-        <main class="d-flex flex-grow-1 overflow-hidden">
+        <main class="d-flex flex-grow-1 overflow-hidden position-relative">
             <!-- sidebar starts  -->
             <input type="checkbox" id="menutoggle">
             <label id="toggle" for="menutoggle"><span class="icon-circle-right"></span></label>
             <aside id="primaryNav" class="d-flex flex-column h-100">
                 <!-- navigations starts-->
                 <nav class="flex-grow-1 overflow-vertical">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav mt-2">
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <span class="icon icon-dashboard"></span>
@@ -101,7 +101,7 @@
                 </nav>
                 <!-- navigations ends -->
                 <!--Signout nav starts-->
-                <nav class="navLog overflow-hidden">
+                <nav class="navLog  mb-3">
                     <ul class="navbar">
                         <li class="nav-item">
                             <a href="#" class="nav-link">
@@ -124,7 +124,7 @@
                 <!-- card container  -->
                 <div class="row mt-4">
                     <!-- row item card start -->
-                    <div class="row-item-card">
+                    <div class="card-col">
                         <!-- card  -->
                         <div class="card card-views">
                             <!-- card header  -->
@@ -145,7 +145,7 @@
                     </div>
                     <!-- row item card end -->
                     <!-- row item card start -->
-                    <div class="row-item-card">
+                    <div class="card-col">
                         <!-- card  -->
                         <div class="card card-products">
                             <!-- card header  -->
@@ -166,7 +166,7 @@
                     </div>
                     <!-- row item card end -->
                     <!-- row item card start -->
-                    <div class="row-item-card">
+                    <div class="card-col">
                         <!-- card  -->
                         <div class="card card-users">
                             <!-- card header  -->
@@ -187,7 +187,7 @@
                     </div>
                     <!-- row item card end -->
                     <!-- row item card start -->
-                    <div class="row-item-card">
+                    <div class="card-col">
                         <!-- card  -->
                         <div class="card card-sells">
                             <!-- card header  -->
@@ -213,10 +213,11 @@
 
                 <!-- product sell container start -->
                 <div class="row mt-4">
-                    <div class="productlisting">
-                        <div class="table-container overflow-auto">
+                    <div class="product-listing">
+                       <div class="product-table overflow-hidden">
+                        <div class="h-100 overflow-auto">
                             <!-- product table start -->
-                            <table class="table">
+                            <table class="table fixed-head">
                                 <thead>
                                     <th>No</th>
                                     <th></th>
@@ -356,15 +357,18 @@
                             </table>
                             <!-- product table end -->
                         </div>
+                       </div>
                     </div>
-
                     <!-- product view and sell  -->
                     <div class="sells-graph">
-                        <div class="container">
+                        <div class="sells-graph-container">
+                            <!-- Title  -->
                             <div class="d-flex align-item-center justify-content-between">
                                 <span>Views & sells</span>
-                                <span>This Week <span class="icon-circle-down"></span></span>
+                                <span class="text-outline">This Week <span class="icon-circle-down"></span></span>
                             </div>
+                            <!-- Title  ends-->
+                            <!-- sub heading  -->
                             <div class="d-flex align-item-center mt-3">
                                 <div>
                                     <span class="icon-stop2 color-views"></span>
@@ -375,6 +379,11 @@
                                     <span>Total Views</span>
                                 </div>
                             </div>
+                            <!-- sub heading ends -->
+
+                            <!-- <div class="graph"> -->
+                            <div class="bar"></div>
+                            <!-- </div> -->
                         </div>
                     </div>
                     <!-- product view and sell  ends-->

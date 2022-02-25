@@ -4,11 +4,9 @@
   display: inline-block;
   color: $white;
   background-color: transparent;
-  padding: 0.3rem 1rem;
+  padding: $btn-padding-y $btn-padding-x;
   cursor: pointer;
-  line-height: 1.5;
-  font-size: 1.2rem;
-  font-family: inherit;
+  font-size: $btn-font-size;
   text-align: center;
   text-decoration: none;
   text-transform: capitalize;

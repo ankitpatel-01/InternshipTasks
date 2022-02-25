@@ -1,38 +1,59 @@
 // All the SCSS mixins goes here
-@mixin position ($position: absolute, $top: auto, $right: auto, $bottom: auto, $left: auto) {
-    position: $position;
-    top     : $top;
-    right   : $right;
-    bottom  : $bottom;
-    left    : $left;
+@mixin position(
+  $position: absolute,
+  $top: auto,
+  $right: auto,
+  $bottom: auto,
+  $left: auto
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
 }
 
-@mixin padding($top:0px,$right:0px,$bottom:0px,$left:0px){
-    padding-top: $top;
-    padding-left: $left;
-    padding-bottom: $bottom;
-    padding-right: $right;
+@mixin padding($top: 0px, $right: 0px, $bottom: 0px, $left: 0px) {
+  padding-top: $top;
+  padding-left: $left;
+  padding-bottom: $bottom;
+  padding-right: $right;
 }
 
 // border radius mixin
 @mixin border-radius($for: all, $val: 10px) {
-    @if $for==all {
-        border-radius: $val;
-    }
+  @if $for==all {
+    border-radius: $val;
+  } @else if $for==topleft {
+    border-top-left-radius: $val;
+  } @else if $for==topright {
+    border-top-right-radius: $val;
+  } @else if $for==bottomright {
+    border-bottom-right-radius: $val;
+  } @else if $for==bottomleft {
+    border-bottom-left-radius: $val;
+  }
+}
 
-    @else if $for==topleft {
-        border-top-left-radius: $val;
-    }
+//media quries
 
-    @else if $for==topright {
-        border-top-right-radius: $val;
+@mixin breakpoint($size) {
+  @if $size == small {
+    @media (max-width: 567px) {
+      @content;
     }
-
-    @else if $for==bottomright {
-        border-bottom-right-radius: $val;
+  } @else if $size == medium {
+    @media (max-width: 768px) {
+      @content;
     }
-
-    @else if $for==bottomleft {
-        border-bottom-left-radius: $val;
+  } @else if $size == large {
+    @media (max-width: 992px) {
+      @content;
     }
+  }
+  @else if $size == xl-large {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
 }

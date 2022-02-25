@@ -1,24 +1,74 @@
 .content-wrapper {
   background-color: $bg-color;
   color: $primary-text-color;
-  padding: $content-padding;
-  padding-left: px($container-padding) + $sidebar-width;
+  padding: $content-wrapper-padding;
 
-  & .row-item-card {
+  & .card-col {
     width: 25%;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+    padding-left: $coloum-padding-side;
+    padding-right: $coloum-padding-side;
+
+    @include breakpoint(xl-large){
+      width: 50%;
+      padding: $coloum-padding-side;
+    }
+    @include breakpoint(large){
+      width: 50%;
+      padding: $coloum-padding-side;
+    }
+    @include breakpoint(medium){
+      width: 50%;
+      padding: $coloum-padding-side;
+    }
+    @include breakpoint(small){
+      width: 100%;
+      padding: $coloum-padding-side;
+    }
   }
 
-  & .productlisting {
+  & .product-listing {
     width: 65%;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+    padding-left: $coloum-padding-side;
+    padding-right: $coloum-padding-side;
+
+    @include breakpoint(xl-large){
+      width: 100%;
+      padding: $coloum-padding-side;
+    }
+    @include breakpoint(large){
+      width: 100%;
+      padding: $coloum-padding-side;
+    }
+    @include breakpoint("medium"){
+      width: 100%;
+      padding: $coloum-padding-side;
+    }
+    @include breakpoint(small){
+      width: 100%;
+      padding: $coloum-padding-side;
+    }
   }
 
   & .sells-graph {
     width: 35%;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+    padding-left: $coloum-padding-side;
+    padding-right: $coloum-padding-side;
+
+    @include breakpoint(xl-large){
+      width: 100%;
+      padding: $coloum-padding-side;
+    }
+    @include breakpoint(large){
+      width: 100%;
+      padding: $coloum-padding-side;
+    }
+    @include breakpoint("medium"){
+      width: 100%;
+      padding: $coloum-padding-side;
+    }
+    @include breakpoint(small){
+      width: 100%;
+      padding: $coloum-padding-side;
+    }
   }
 }

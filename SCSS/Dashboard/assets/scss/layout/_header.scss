@@ -16,18 +16,16 @@
   }
 
   .searchbox {
-    @include position(relative);
+    position: relative;
     margin-left: $searchbox-ml;
     height: $searchbox-height;
     width: $searchbox-width;
     background-color: $searchbox-bg;
-    border: 1px solid $outline;
 
     span {
       @include position(absolute, auto, auto, auto, 1rem);
       font-size: 1.2rem;
-      font-weight: 100;
-      color: gray;
+      color: $header-icon-color;
     }
     input {
       background-color: $searchbox-bg;
@@ -40,11 +38,25 @@
     button {
       height: 100%;
     }
+
+    @include breakpoint(large) {
+      width: 400px;
+    }
+    @include breakpoint(medium) {
+      width: 360px;
+      margin-left: 0px;
+    }
+    @include breakpoint(small) {
+      display: none;
+    }
   }
 
   .notify {
     li:not(:first-child) {
       margin-left: 30px;
+      @include breakpoint(small){
+        margin-left: 16px;
+      }
     }
     li:last-child {
       margin-left: 20px;
@@ -55,12 +67,17 @@
       position: relative;
       .notification-dot {
         @include position($top: -12px, $left: 16px);
+        @include border-radius(all, 50%);
         height: $notification-dot-width;
         width: $notification-dot-width;
         background-color: $accent;
-        border-radius: 50%;
-        border: 1px solid white;
         display: inline-block;
+      }
+
+      &:hover {
+        .icon {
+          color: $primary;
+        }
       }
     }
     .avatar {

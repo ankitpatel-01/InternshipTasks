@@ -1,0 +1,14 @@
+.sells-graph-container {
+  height: $sells-graph-height; 
+  background-color: $card-bg;
+  padding: $card-padding;
+}
+.bar {
+  width: 10px;
+}
+
+@each $name, $value in $graph {
+  .bar-#{$name} {
+    background-color: $value;
+  }
+}
