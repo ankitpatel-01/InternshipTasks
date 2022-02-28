@@ -66,6 +66,8 @@
       }
       input {
         font-size: .725rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
         @include padding(0.6rem, 0.6rem, 0.6rem, 2rem);
       }
       button {

@@ -829,6 +829,8 @@ h1 {
   }
   .header .searchbox input {
     font-size: .725rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
     padding-top: 0.6rem;
     padding-left: 2rem;
     padding-bottom: 0.6rem;
