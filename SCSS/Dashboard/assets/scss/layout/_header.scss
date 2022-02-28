@@ -3,6 +3,9 @@
   height: $header-height;
   background-color: $header-bg;
   @extend %headerborder;
+  @include breakpoint(small){
+    height: $header-height - 20px;
+  }
 
   & .header-content {
     width: 100%;
@@ -10,8 +13,16 @@
 
   & .brandlogo {
     width: $barnd-logo-width;
+
+    @include breakpoint(small){
+      width: $barnd-logo-width - 30px;
+    }
     span {
       font-size: $barnd-logo-size;
+
+      @include breakpoint(small){
+        font-size: 1.2rem;
+      }
     }
   }
 
@@ -29,7 +40,7 @@
     }
     input {
       background-color: $searchbox-bg;
-      flex: 1;
+      width: 100%;
       font-size: 1.1rem;
       outline: none;
       border: none;
@@ -47,20 +58,34 @@
       margin-left: 0px;
     }
     @include breakpoint(small) {
-      display: none;
+      width: 160px;
+      span {
+        @include position(absolute, auto, auto, auto, .725rem);
+        font-size: 1rem;
+        color: $header-icon-color;
+      }
+      input {
+        font-size: .725rem;
+        @include padding(0.6rem, 0.6rem, 0.6rem, 2rem);
+      }
+      button {
+        display: none;
+      }
     }
   }
 
   .notify {
     li:not(:first-child) {
       margin-left: 30px;
-      @include breakpoint(small){
-        margin-left: 16px;
-      }
     }
     li:last-child {
       margin-left: 20px;
       margin-right: 40px;
+    }
+    li:not(:last-child) {
+      @include breakpoint(small){
+        display: none;
+      }
     }
 
     a {
@@ -90,6 +115,45 @@
     .icon {
       font-size: $header-icon-size;
       color: $header-icon-color;
+    }
+
+    .dropdown-menu{
+      position: relative;
+      label{
+        cursor: pointer;
+        .icon:hover{
+          color: $primary;
+        }
+      }
+      #dropdown{
+        display: none;
+        &:checked{
+          ~ .dropdown-content{
+            display: block;
+          }
+        }
+      }
+  
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        bottom: -150px;
+        left: -150px;
+        background-color: #f9f9f9;
+        min-width: 180px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        transition: .6s all ease;
+        a {
+          display: flex;
+          color: black;
+          padding: 12px 16px;
+          text-align: left;
+          &:hover {
+            background-color: #ddd;
+          }
+        }
+      }
     }
   }
 }

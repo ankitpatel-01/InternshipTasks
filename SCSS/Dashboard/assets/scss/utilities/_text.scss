@@ -11,6 +11,10 @@
 
 h1 {
   font-weight: $heading-font-weight;
+
+  @include breakpoint(small){
+    font-size: 1.8rem;
+  }
 }
 
 @each $name, $value in $sells {
