@@ -1,0 +1,62 @@
+// Button styles goes here
+.btn {
+    display: inline-block;
+    color: $white;
+    background-color: transparent;
+    padding: $btn-padding-y $btn-padding-x;
+    cursor: pointer;
+    font-size: $btn-font-size;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    border: 1px solid transparent;
+    @include border-radius;
+
+    @include breakpoint(sm){
+      padding: $btn-padding-y-sm $btn-padding-x-sm;
+    }
+  
+    &[disabled] {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  
+    &:focus {
+      outline: none;
+    }
+  
+    &:active {
+      transform: scale(0.98);
+    }
+
+    .icon{
+        margin-right:.5rem;
+    }
+
+    @include breakpoint(md){
+      font-size: 1rem;
+    }
+  }
+  
+  .btn-block {
+    display: block;
+    width: 100%;
+  }
+  
+  @each $key, $value in $theme-colors {
+    .btn-#{$key} {
+      color: $white;
+      background-color: $value;
+    }
+    .btn-outline-#{$key} {
+      color: $value;
+      border-color: $value;
+      background-color: transparent;
+  
+      &:hover {
+        color: $white;
+        border-color: $value;
+        background-color: $value;
+      }
+    }
+  }

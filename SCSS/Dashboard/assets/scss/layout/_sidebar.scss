@@ -12,14 +12,14 @@
 
     @include breakpoint(small) {
       ~ #primaryNav {
-        width: 30%;
+        width: 100px;
         left: 0;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px;
       }
       ~ #toggle {
         z-index: 100;
         transform: rotate(180deg);
-        left: 25%;
+        left: 100px;
       }
 
       ~ .content-wrapper {

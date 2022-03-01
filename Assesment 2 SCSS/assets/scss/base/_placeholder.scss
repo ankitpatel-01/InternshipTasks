@@ -1,0 +1,8 @@
+// All the SCSS placeholders goes here
+
+//to center a item in any container
+%flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

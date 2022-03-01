@@ -1,0 +1,53 @@
+.table-container{
+  width: 100%;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  background-color: $white;
+  overflow-x: scroll;
+
+  &.fixed-head {
+    th {
+      position: sticky;
+      top: 0px;
+      background-color: $white;
+    }
+  }
+
+  tr{
+    td:nth-child(1){
+     min-width: 280px;
+    }
+  }
+
+  th {
+    color: $text-muted;
+    font-weight: 400;
+    .icon{
+      font-size: smaller;
+    }
+    @include breakpoint(xl){
+      min-width: 120px;
+    }
+  }
+  
+  th,
+  td {
+    padding: $table-data-padding;
+    border-bottom: 2px solid $table-cell-border-color;
+  }
+
+  .product-img {
+    vertical-align: middle;
+    width: $product-img-wh;
+    height: $product-img-wh;
+    margin-right: .725rem;
+  }
+
+  .vendors-logo {
+    width: $vendor-img-width;
+    height: $vendor-img-height;
+  }
+}
