@@ -1,0 +1,127 @@
+// Header area style
+.header {
+  height: $header-height;
+  border-bottom: 1px solid $outline;
+  @include breakpoint(md){
+    height: $header-height-md;
+  }
+  @include breakpoint(sm){
+    height: $header-height-sm;
+    justify-content: space-between;
+  }
+
+  .header-content{
+    @include breakpoint(sm){
+      flex-grow: 0;
+    }
+  }
+
+  .icon,
+  .toggle-btn {
+    font-size: $header-icon;
+    color: $text-muted;
+    cursor: pointer;
+  }
+
+  .icon {
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  .toggle-btn {
+    color: $primary-text-color;
+    margin: 0 1rem;
+  }
+
+  .brand {
+    &-logo {
+      @extend %flex-center;
+      width: $brand-logo-width;
+      @include breakpoint(md){
+        width: $brand-logo-width-md;
+      }
+    }
+    &-name {
+      font-size: $brand-logo-size;
+      font-weight: $font-bold;
+      @include breakpoint(md){
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &-content {
+    #title {
+      font-size: $header-title;
+      font-weight: $font-bold;
+      @include breakpoint(md){
+        font-size: 1.2rem;
+      }
+      @include breakpoint(sm){
+        display: none;
+      }
+    }
+  }
+
+  & .notification {
+    @include breakpoint(sm){
+      display: none;
+    }
+    .nav-item {
+      margin: 0 0.725rem;
+    }
+
+    .user {
+      &-avatar {
+        vertical-align: middle;
+        width: $user-avatar;
+        height: $user-avatar;
+        border: 1px solid $outline;
+        @include border-radius(all, 50%);
+      }
+      &-name{
+        font-weight: $font-bold;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    position: relative;
+    label {
+      cursor: pointer;
+      .icon:hover {
+        color: $primary;
+      }
+    }
+    #dropdown {
+      display: none;
+      &:checked {
+        ~ .dropdown-content {
+          display: block;
+        }
+      }
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      bottom: -235px;
+      left: -160px;
+      background-color: #f9f9f9;
+      min-width: 180px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      transition: 0.6s all ease;
+      div {
+        display: flex;
+        align-items: center;
+        color: black;
+        padding: 12px 16px;
+        text-align: left;
+        &:hover {
+          background-color: #ddd;
+        }
+      }
+    }
+  }
+}

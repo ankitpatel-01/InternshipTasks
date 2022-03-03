@@ -1,0 +1,60 @@
+// All the SCSS mixins goes here
+
+//position minix
+@mixin position ($position: absolute, $top: auto, $right: auto, $bottom: auto, $left: auto) {
+    position: $position;
+    top     : $top;
+    right   : $right;
+    bottom  : $bottom;
+    left    : $left;
+}
+
+// border radius mixin
+@mixin border-radius($for: all, $val: 8px) {
+    @if $for==all {
+        border-radius: $val;
+    }
+
+    @else if $for==topleft {
+        border-top-left-radius: $val;
+    }
+
+    @else if $for==topright {
+        border-top-right-radius: $val;
+    }
+
+    @else if $for==bottomright {
+        border-bottom-right-radius: $val;
+    }
+
+    @else if $for==bottomleft {
+        border-bottom-left-radius: $val;
+    }
+}
+
+//breakpoint for media mixin
+@mixin breakpoint($size) {
+    @if $size == mini{
+      @media (max-width: 320px) {
+        @content;
+      }
+    }
+    @else if $size == sm {
+      @media (max-width: 567px) {
+        @content;
+      }
+    } @else if $size == md {
+      @media (max-width: 768px) {
+        @content;
+      }
+    } @else if $size == lg {
+      @media (max-width: 992px) {
+        @content;
+      }
+    }
+    @else if $size == xl {
+      @media (max-width: 1200px) {
+        @content;
+      }
+    }
+  }

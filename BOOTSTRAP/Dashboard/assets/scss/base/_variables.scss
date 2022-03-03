@@ -1,0 +1,62 @@
+// All the SCSS Variables goes here
+
+// Fonts
+$font-size-base: 16;
+$font-family: "Roboto", sans-serif;
+$font-light: 300;
+// $font-medium: 500;
+$font-bold: 500;
+
+// common
+$transition-timing: 0.6s;
+$icon-size:1.5rem;
+
+// Border-radius
+$border-radius: 12px;
+$rounded-circle: 50%;
+
+// Sidebar
+$sidebar-width: 210px;
+$sidebar-width-toggle:75px;
+$sidebar-width-md: 260px;
+$sidebar-icon-size:1.2rem;
+$nav-item-padding-y:1rem;
+$nav-item-padding-x:1.5rem;
+$nav-spacing:.4rem;
+
+// Header
+$header-height: 80px;
+$header-height-md: 70px;
+$header-height-sm: 60px;
+$brand-logo-width: $sidebar-width;
+$brand-logo-width-md: 150px;
+$brand-logo-size: 1.725rem;
+$header-icon:$icon-size;
+$header-title:1.5rem;
+$user-avatar:35px;
+
+// Content Main
+//row-column
+$padding-x:1rem;
+
+//button
+$btn-padding-y:.725rem;
+$btn-padding-x:1.5rem;
+$btn-padding-y-sm:.625rem;
+$btn-padding-x-sm:1rem;
+$btn-font-size:1.2rem;
+
+// Card
+$card-padding-y:1.5rem;
+$card-padding-x:1rem;
+$card-icon-font-size:1.5rem;
+$card-title-font-size:1rem;
+$card-text-font-size:1.5rem;
+$card-logo-width:40px;
+$card-logo-height:40px;
+
+// Table
+$table-data-padding:1rem;
+$product-img-wh:30px;
+$vendor-img-width:100px;
+$vendor-img-height:30px;

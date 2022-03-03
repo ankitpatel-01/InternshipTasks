@@ -1,0 +1,100 @@
+// Styles for Sidebar lies here
+#sidebar-toggle {
+  display: none;
+  &:checked {
+    & ~ #sidebar {
+      flex: 0 0 $sidebar-width-toggle;
+      width: $sidebar-width-toggle;
+
+      @include breakpoint(md) {
+        flex: 0 0 $sidebar-width-md;
+        width: $sidebar-width-md;
+        left: 0;
+        box-shadow: 13px -1px 17px -2px rgba(0,0,0,0.2);
+
+        & ~ .content-wrapper{
+          filter: blur(8px);
+          pointer-events: none;
+        }
+      }
+      @include breakpoint(sm) {
+        flex: 0 0 100%;
+        width: 100%;
+        left: 0;
+      }
+      .nav-name {
+        transform: translateX(400px);
+
+        @include breakpoint(md) {
+          transform: translateX(0px);
+        }
+      }
+      .nav-link-name {
+        transform: translateX(400px);
+        @include breakpoint(md) {
+          transform: translateX(0px);
+        }
+      }
+    }
+  }
+}
+
+#sidebar {
+  flex: 0 0 $sidebar-width;
+  width: $sidebar-width;
+  transition: $transition-timing all;
+
+  @include breakpoint(md) {
+    position: absolute;
+    top: 0;
+    left: -$sidebar-width-md;
+    flex: 0 0 $sidebar-width-md;
+    width: $sidebar-width-md;
+    background: $white;
+    height: 100%;
+    z-index: 100;
+  }
+  .nav {
+    &-name {
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: $transition-timing all;
+      font-weight: $font-bold;
+      padding: $nav-item-padding-y $nav-item-padding-x;
+    }
+
+    &-item {
+      padding: $nav-item-padding-y $nav-item-padding-x;
+      margin-bottom: $nav-spacing;
+      background: transparent;
+      cursor: pointer;
+
+      &.active,
+      &:hover {
+        .nav-link {
+          color: $primary;
+        }
+        background: $nav-active-color;
+        font-weight: $font-bold;
+        border-left: 3px solid $primary;
+      }
+
+      &.active {
+        font-weight: 400;
+      }
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      &-name {
+        transition: $transition-timing all;
+      }
+      .icon {
+        font-size: $sidebar-icon-size;
+        margin-right: 1rem;
+      }
+      color: $nav-text;
+    }
+  }
+}

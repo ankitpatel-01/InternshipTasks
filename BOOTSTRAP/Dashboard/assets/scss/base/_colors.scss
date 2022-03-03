@@ -1,0 +1,58 @@
+// // Theme Colors
+$primary: #00b11c;
+$white: #ffffff;
+$success: #00b11c;
+$danger: #e43536;
+$warning: #e98e39;
+$info: #389cff;
+$outline:#e2e2e2;
+//primary-text-color
+$primary-text-color:#000000;
+
+
+// Fonts
+$text-muted: #6a6a73;
+
+// Sidebar
+$nav-text: $text-muted;
+$nav-active-color: lighten($primary,62);
+$nav-active-text: $primary;
+
+//content
+$content-wrapper-bg:#fafafa;
+
+// Card
+$card-bg: $white;
+$card-text: $text-muted;
+
+// // Table
+$table-bg: $white;
+$table-cell-border-color:#fafafa;
+
+$theme-colors: (
+  "primary": $primary,
+  "warning": $warning,
+  "success": $success,
+  "danger": $danger,
+  "info": $info
+);
+
+//cards
+$cards:(
+    "scans":#000000,
+    "list":#389cff,
+    "cost":#18ab6e,
+    "buy-now":#e98e39,
+    "buy-cheaper":#6967fe,
+    "buy-healthier":#fa6a6b,
+);
+    
+//status
+$status:(
+    "discarded":#d46667,
+    "want":#30b145,
+    "waiting":#eea03f,
+    "cancelled":#060817,
+);
+
+

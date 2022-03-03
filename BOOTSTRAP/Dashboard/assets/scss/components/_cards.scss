@@ -1,0 +1,73 @@
+// Card styles goes here
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $card-padding-y $card-padding-x;
+  background-color: $card-bg;
+  @include border-radius;
+  transition: $transition-timing all ease;
+  cursor: pointer;
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &-logo{
+    @extend %flex-center;
+    width: $card-logo-width;
+    height: $card-logo-height;
+    @include border-radius(all,50%);
+  }
+
+  &-icon {
+    font-size: $card-icon-font-size;
+  }
+
+  &-title {
+    font-size: $card-title-font-size;
+    font-weight: $font-bold;
+    color: $text-muted;
+    margin-bottom: .725rem;
+    @include breakpoint(sm){
+      font-size: .725rem;
+    }
+  }
+
+  &-text {
+    line-height: 1.5rem;
+    font-size: $card-text-font-size;
+    font-weight: $font-bold;
+  }
+
+  &:hover{
+    .card-title,.card-text{
+      color: $white;
+    }
+  }
+}
+
+
+@each $key, $value in $cards {
+  .card-#{$key} {
+    .card-logo {
+      background-color: rgba($value, .15);
+      .icon {
+        color: $value;
+      }
+    }
+    &.card {
+      &:hover {
+        background-color: $value;
+        .card-logo {
+          background-color: lighten($value, 10%);
+          .icon {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
