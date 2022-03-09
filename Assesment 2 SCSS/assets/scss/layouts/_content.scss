@@ -4,28 +4,25 @@
 
   .card-col {
     width: 16.66%;
+    margin-top: 1.5rem;
     padding-left: $padding-x;
     padding-right: $padding-x;
 
-    @include breakpoint(xl){
+    @include breakpoint(xl) {
       width: 33.33%;
-      padding: $padding-x;
     }
-    @include breakpoint(md){
+    @include breakpoint(md) {
       width: 33.33%;
-      padding: $padding-x;
     }
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       width: 50%;
-      padding: .5rem;
     }
-    @include breakpoint(mini){
+    @include breakpoint(mini) {
       width: 100%;
-      padding: .725rem;
     }
   }
 
-  .product-list{
-      height: 500px;
+  .product-list {
+    height: 500px;
   }
 }

@@ -8,6 +8,7 @@
   @include border-radius;
   transition: $transition-timing all ease;
   cursor: pointer;
+  height: 100%;
 
   &-body {
     display: flex;
@@ -17,6 +18,7 @@
 
   &-logo{
     @extend %flex-center;
+    flex: 0 0 $card-logo-width;
     width: $card-logo-width;
     height: $card-logo-height;
     @include border-radius(all,50%);

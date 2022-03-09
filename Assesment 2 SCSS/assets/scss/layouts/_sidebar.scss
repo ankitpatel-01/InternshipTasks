@@ -65,7 +65,8 @@
 
     &-item {
       padding: $nav-item-padding-y $nav-item-padding-x;
-      margin-bottom: $nav-spacing;
+      margin-bottom: $nav-spacing;  
+      border-left: 3px solid transparent;
       background: transparent;
       cursor: pointer;
 
@@ -75,7 +76,7 @@
           color: $primary;
         }
         background: $nav-active-color;
-        font-weight: $font-bold;
+        // font-weight: $font-bold;
         border-left: 3px solid $primary;
       }
 

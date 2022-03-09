@@ -474,6 +474,7 @@ a {
 
 .content-wrapper .card-col {
   width: 16.66%;
+  margin-top: 1.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -481,28 +482,24 @@ a {
 @media (max-width: 1200px) {
   .content-wrapper .card-col {
     width: 33.33%;
-    padding: 1rem;
   }
 }
 
 @media (max-width: 768px) {
   .content-wrapper .card-col {
     width: 33.33%;
-    padding: 1rem;
   }
 }
 
 @media (max-width: 567px) {
   .content-wrapper .card-col {
     width: 50%;
-    padding: .5rem;
   }
 }
 
 @media (max-width: 320px) {
   .content-wrapper .card-col {
     width: 100%;
-    padding: .725rem;
   }
 }
 
@@ -608,13 +605,13 @@ a {
 #sidebar .nav-item {
   padding: 1rem 1.5rem;
   margin-bottom: 0.4rem;
+  border-left: 3px solid transparent;
   background: transparent;
   cursor: pointer;
 }
 
 #sidebar .nav-item.active, #sidebar .nav-item:hover {
   background: #eefff1;
-  font-weight: 500;
   border-left: 3px solid #00b11c;
 }
 
@@ -796,6 +793,7 @@ a {
   -webkit-transition: 0.6s all ease;
   transition: 0.6s all ease;
   cursor: pointer;
+  height: 100%;
 }
 
 .card-body {
@@ -812,6 +810,9 @@ a {
 }
 
 .card-logo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40px;
+          flex: 0 0 40px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
